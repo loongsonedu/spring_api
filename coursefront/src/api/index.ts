@@ -86,7 +86,7 @@ export async function getMyRegisters(phone: string) {
   const res = await request<never, IMyRegister[]>('/seller/api/students', {
     params: {
       clientId: CLIENT_ID,
-      'phone.equals': phone
+      phone: phone
     }
   })
   return res
